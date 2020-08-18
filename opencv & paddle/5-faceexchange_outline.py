@@ -46,9 +46,6 @@ if __name__ == '__main__':
                 if (mask2[i,j] == 255).all(): # If all 255, then it is contour
                     img[i + y,j + x] = head2[i,j]
         
-        
-        mask2 = cv2.resize(head,dsize = (w,h))
-        img[y:y+h,x:x+w] = head2
     cv2.imshow('faces',img)
     #cv2.imwrite('face',img)
     cv2.waitKey(0)
